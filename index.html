@@ -3,269 +3,216 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Moe Myint Kyal Sin – Public Relations & Creative Communications</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Moe Myint Kyal Sin — Résumé</title>
+  <meta name="description" content="Résumé site for Moe Myint Kyal Sin — Communication (PR), Project Management, and Organizational Psychology." />
+  <meta property="og:title" content="Moe Myint Kyal Sin — Résumé" />
+  <meta property="og:description" content="Communication (PR) · Project Management · Organizational Psychology" />
+  <meta property="og:type" content="website" />
   <style>
-    :root {
-      --gold: #F5D042; /* sunflower gold */
-      --blue: #3AA6FF; /* sky blue */
-      --ink: #0f172a;  /* slate-900 */
-      --slate: #475569; /* slate-600 */
-      --bg: #fafafa;
-      --card: #ffffff;
-      --muted: #64748b;
-      --ring: rgba(58,166,255,.35);
+    :root{
+      --ink:#0f172a;      /* slate-900 */
+      --sub:#334155;      /* slate-700 */
+      --muted:#64748b;    /* slate-500 */
+      --bg:#ffffff;
+      --line:#e2e8f0;     /* slate-200 */
+      --pill:#f1f5f9;     /* slate-100 */
+      --accent:#2563eb;   /* blue-600 */
+      --accent-ink:#fff;
     }
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--ink);
-      background: linear-gradient(180deg, #fff 0%, #fff 40%, #fdf9e6 40%, #f6fbff 100%);
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:920px;margin:48px auto;padding:0 20px}
+    /* HERO */
+    header{display:flex;align-items:center;gap:20px;margin-bottom:24px}
+    .avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:2px solid var(--line)}
+    .hgroup{flex:1}
+    .name{font-size:28px;font-weight:800;letter-spacing:.2px;margin:0}
+    .tag{color:var(--sub);margin:.25rem 0 0}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;border-radius:999px;background:var(--pill);
+      color:var(--ink);border:1px solid var(--line);font-weight:600;
+      transition:all .15s ease-in-out;text-decoration:none;
     }
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Header */
-    .header {
-      max-width: 1100px; margin: 48px auto 24px; padding: 0 20px;
-      display: grid; grid-template-columns: 1fr; gap: 12px;
+    .pill:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .pill.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+    /* LAYOUT */
+    .two-col{display:grid;grid-template-columns:1.25fr .75fr;gap:28px}
+    section{padding:18px 0;border-top:1px solid var(--line)}
+    h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+    .row{display:flex;justify-content:space-between;gap:16px}
+    .left{font-weight:600}
+    .right{white-space:nowrap;color:var(--muted)}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .sub{color:var(--sub);margin-top:2px}
+    @media (max-width:800px){
+      .two-col{grid-template-columns:1fr}
+      .row{flex-direction:column;gap:4px}
+      .right{white-space:normal}
+      header{flex-direction:column;align-items:flex-start}
     }
-    .title {
-      font-family: Poppins, Inter, sans-serif;
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: 0.2px;
-    }
-    .subtitle { color: var(--slate); font-weight: 500; }
-    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-    .chip {
-      background: var(--card);
-      border: 1.5px solid var(--ring);
-      padding: 8px 12px; border-radius: 999px; font-size: 13px; color: var(--muted);
-      backdrop-filter: blur(6px);
-    }
-
-    /* Layout */
-    .container { max-width: 1100px; margin: 0 auto 60px; padding: 0 20px; }
-    .grid {
-      display: grid; grid-template-columns: 300px 1fr; gap: 24px;
-    }
-    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
-
-    /* Cards */
-    .card {
-      background: var(--card);
-      border: 1px solid #eef2f7;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(16,24,40,.05);
-    }
-    .card + .card { margin-top: 16px; }
-
-    /* Sidebar */
-    .sidebar { position: sticky; top: 16px; align-self: start; }
-    .section { padding: 18px 18px 14px; }
-    .section h3 {
-      margin: 0 0 12px; font-family: Poppins, Inter, sans-serif; font-weight: 700;
-      font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: #111827;
-    }
-    .kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 10px; font-size: 14px; color: var(--slate); }
-    .pill { display: inline-block; padding: 8px 10px; border-radius: 12px; border: 1px solid #eaeef4; background: #fcfdff; color: #0f172a; font-size: 13px; }
-    .pill + .pill { margin-left: 8px; }
-    .stack { display: flex; flex-wrap: wrap; gap: 8px; }
-
-    /* Main */
-    .main .block { padding: 22px 22px; }
-    .head {
-      display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-      border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; margin-bottom: 14px;
-    }
-    .head h2 { margin: 0; font-family: Poppins, Inter, sans-serif; font-size: 18px; }
-    .edu-item, .exp-item, .proj-item, .lead-item { margin-bottom: 14px; }
-    .role { font-weight: 700; }
-    .meta { color: var(--muted); font-size: 13px; }
-    .bullet { margin: 6px 0 0 0; list-style: none; padding-left: 0; }
-    .bullet li { position: relative; padding-left: 18px; margin-bottom: 6px; }
-    .bullet li::before {
-      content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), var(--blue));
-      box-shadow: 0 0 0 2px rgba(58,166,255,.12);
-    }
-
-    /* Banner */
-    .banner {
-      background: linear-gradient(90deg, var(--gold), var(--blue));
-      color: #111827; border-radius: 14px; padding: 10px 14px; display: inline-flex; align-items: center; gap: 10px;
-      font-weight: 600; letter-spacing: .3px;
-    }
-
-    /* Footer */
-    footer { max-width: 1100px; margin: 28px auto 60px; padding: 0 20px; color: var(--muted); font-size: 13px; text-align: center; }
-
-    /* Print */
-    @media print {
-      body { background: #fff; }
-      .header, .container, footer { max-width: 100%; }
-      .chip, .banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      a { color: #0645ad; }
-      .sidebar { position: static; }
+    /* PRINT */
+    @media print{
+      .links{display:none}
+      a{color:inherit;text-decoration:none}
+      section{page-break-inside:avoid}
+      .wrap{margin:12px auto}
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div>
-      <div class="title">Moe Myint Kyal Sin</div>
-      <div class="subtitle">Public Relations & Creative Communications</div>
-      <div class="chips">
-        <span class="chip">La Puente, CA</span>
-        <a class="chip" href="mailto:msin2@csu.fullerton.edu">msin2@csu.fullerton.edu</a>
-        <a class="chip" href="tel:+17028159426">(702) 815‑9426</a>
-        <a class="chip" href="https://www.linkedin.com/in/moesin07/" target="_blank" rel="noopener">linkedin.com/in/moesin07</a>
+  <div class="wrap">
+    <!-- HERO -->
+    <header>
+      <!-- Optional headshot: place a file named headshot.jpg next to this HTML -->
+      <img src="headshot.jpg" alt="Moe Myint Kyal Sin" class="avatar" onerror="this.style.display='none'">
+      <div class="hgroup">
+        <h1 class="name">Moe Myint Kyal Sin</h1>
+        <p class="tag">Communication (PR) · Project Management · Organizational Psychology · CSUF ’26</p>
+        <div class="links">
+          <!-- ✅ FIXED download link (Option A: same folder) -->
+          <a class="pill primary" href="spring2026resume.pdf" download>Download Résumé (PDF)</a>
+          <!-- If your PDF lives at /resume/spring2026resume.pdf, use absolute URL instead:
+          <a class="pill primary" href="https://moesin07-lab.github.io/resume/spring2026resume.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a> -->
+          <a class="pill" href="mailto:Msin2@csu.fullerton.edu">Msin2@csu.fullerton.edu</a>
+          <a class="pill" href="tel:+17028159426">(702) 815-9426</a>
+          <a class="pill" href="https://www.linkedin.com/in/moesin07" target="_blank" rel="noopener">linkedin.com/in/moesin07</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="container">
-    <div class="grid">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <div class="card section">
-          <h3>Skills & Tools</h3>
-          <div class="stack">
-            <span class="pill">Public Relations</span>
-            <span class="pill">Strategic Communications</span>
-            <span class="pill">Media Outreach</span>
-            <span class="pill">Content Calendars</span>
-            <span class="pill">Digital Strategy</span>
-            <span class="pill">Project Management</span>
-            <span class="pill">Podcast Production</span>
-            <span class="pill">Canva</span>
-            <span class="pill">Google Workspace</span>
-            <span class="pill">Notion</span>
-            <span class="pill">HTML & CSS</span>
-            <span class="pill">CRM</span>
-            <span class="pill">Analytics</span>
+    <div class="two-col">
+      <main>
+        <section id="experience">
+          <h2>Professional Experience</h2>
+
+          <div class="row">
+            <div class="left">Titan Public Relations — Account Executive; Fullerton, CA</div>
+            <div class="right">Sep 2025 – Present</div>
           </div>
-        </div>
-        <div class="card section">
-          <h3>Certifications</h3>
-          <div class="kv">
-            <div>Certified Scrum Master (CSM), Scrum Alliance</div><div class="meta">Earned Mar 2024</div>
-            <div>Foundations of Project Management (Coursera)</div><div class="meta">Expected Feb 2026</div>
+          <ul>
+            <li>Lead a four-member PR team to develop and execute a campaign that increased Guan Fitness engagement through strategic branding and social media initiatives.</li>
+          </ul>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">Thrive Mentor — CSUF Public Health; Fullerton, CA</div>
+            <div class="right">Aug 2025 – Present</div>
           </div>
-        </div>
-        <div class="card section">
-          <h3>Languages</h3>
-          <div class="kv">
-            <div>English</div><div class="meta">Fluent</div>
-            <div>Burmese</div><div class="meta">Fluent</div>
+          <ul>
+            <li>Mentor first-generation college students; facilitate workshops on leadership, time management, and academic success.</li>
+          </ul>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">Titan Public Relations — Account Coordinator; Fullerton, CA</div>
+            <div class="right">Sep 2024 – Dec 2024</div>
           </div>
-        </div>
-        <div class="card section">
-          <h3>Interests</h3>
-          <div class="stack">
-            <span class="pill">Organizational Psychology</span>
-            <span class="pill">Creative Strategy</span>
-            <span class="pill">Storytelling</span>
-            <span class="pill">Wellness</span>
-            <span class="pill">Travel</span>
+          <ul>
+            <li>Supported an entertainment client’s PR campaign; managed media outreach, content calendars, and digital engagement.</li>
+          </ul>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">Student Office Assistant — Pasadena, CA</div>
+            <div class="right">Jan 2022 – Aug 2023</div>
           </div>
-        </div>
+          <ul>
+            <li>Streamlined operations (comms, scheduling, 1,000+ records), improving response time by ~50% using CRM, MS Office, and Google Workspace.</li>
+          </ul>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+
+          <div class="row">
+            <div class="left">Newport Beach Film Festival: Brazilian Spotlight — Outreach Coordinator</div>
+            <div class="right">Aug 2025 – Present</div>
+          </div>
+          <ul>
+            <li>Coordinated sponsor outreach, creative assets, and event logistics for a large-scale cultural showcase; supported sold-out attendance.</li>
+          </ul>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">The Inner Universe — Podcast Host &amp; Producer</div>
+            <div class="right">Apr 2025 – Present</div>
+          </div>
+          <ul>
+            <li>Produce, script, and host a podcast on creativity, psychology, and healing; built an audience of 500+ across Spotify, iHeartRadio, and Amazon Music.</li>
+          </ul>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">Fearless Digital — Social Media Marketing Agent (Freelance)</div>
+            <div class="right">Jul 2020 – Apr 2021</div>
+          </div>
+          <ul>
+            <li>Executed digital campaigns and branding strategies for clients in creative, food, and tech verticals.</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+        <section id="education">
+          <h2>Education &amp; Certification</h2>
+          <div class="row">
+            <div class="left">California State University, Fullerton</div>
+            <div class="right">Expected May 2026</div>
+          </div>
+          <div class="sub">B.A., Communication (Public Relations)</div>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">Pasadena City College</div>
+            <div class="right">Aug 2020 – May 2024</div>
+          </div>
+          <div class="sub">A.A., Communication, Psychology, Sociology</div>
+
+          <div style="margin-top:12px;font-weight:600">Certifications</div>
+          <ul style="margin-top:6px">
+            <li>Foundations of Project Management (Coursera) — Expected Feb 2026</li>
+            <li>Certified ScrumMaster® (CSM), Scrum Alliance — Earned Mar 2024</li>
+          </ul>
+        </section>
+
+        <section id="leadership">
+          <h2>Leadership &amp; Activities</h2>
+          <div class="row">
+            <div class="left">Entertainment &amp; Tourism Club (ETC) — Member</div>
+            <div class="right">Aug 2025 – Present</div>
+          </div>
+          <ul><li>Engage in networking panels, mixers, and industry events with entertainment and tourism professionals.</li></ul>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">PRSSA (CSUF) — Member</div>
+            <div class="right">Aug 2024 – Aug 2025</div>
+          </div>
+          <ul><li>Collaborated on events and campus engagement; strengthened PR skills through peer and professional workshops.</li></ul>
+
+          <div class="row" style="margin-top:10px">
+            <div class="left">Burmese Club — President</div>
+            <div class="right">Aug 2021 – Aug 2022</div>
+          </div>
+          <ul><li>Led cultural programming and event planning to strengthen multicultural engagement and student belonging.</li></ul>
+        </section>
+
+        <section id="awards">
+          <h2>Honors &amp; Awards</h2>
+          <ul>
+            <li>NCWIT — Honorable Mention (2018, 2019)</li>
+            <li>Certificate of Special Congressional Recognition — Aspirations in Computing Honorable Mention (2018)</li>
+          </ul>
+        </section>
+
+        <section id="additional">
+          <h2>Additional Information</h2>
+          <div style="margin-bottom:6px"><strong>Skills:</strong> Project Management, Public Relations, Leadership, Podcast Production, Digital Strategy, Canva, Notion, Google Workspace, HTML &amp; CSS</div>
+          <div style="margin-bottom:6px"><strong>Languages:</strong> English (Fluent), Burmese (Fluent)</div>
+          <div><strong>Interests:</strong> Organizational Psychology, Creative Strategy, Wellness, Travel, Storytelling</div>
+        </section>
       </aside>
-
-      <!-- Main Column -->
-      <section class="main">
-        <div class="card block">
-          <div class="head"><h2>Education</h2></div>
-          <div class="edu-item">
-            <div class="role">California State University, Fullerton — B.A. Communication (Public Relations)</div>
-            <div class="meta">Expected May 2026</div>
-          </div>
-          <div class="edu-item">
-            <div class="role">Pasadena City College — A.A. Communication, Psychology, Sociology</div>
-            <div class="meta">Aug 2020 – May 2024</div>
-          </div>
-        </div>
-
-        <div class="card block">
-          <div class="head"><h2>Professional Experience</h2></div>
-          <div class="exp-item">
-            <div class="role">Titan Public Relations — Account Executive</div>
-            <div class="meta">Sep 2025 – Present · Fullerton, CA</div>
-            <ul class="bullet">
-              <li>•	Lead a four-member PR team to develop and execute a campaign that increased Guan Fitness engagement through strategic branding and social media initiatives.</li>
-            </ul>
-          </div>
-          <div class="exp-item">
-            <div class="role">Thrive Mentor — CSUF Public Health</div>
-            <div class="meta">Aug 2025 – Present · Fullerton, CA</div>
-            <ul class="bullet">
-              <li>Mentor 10+ first‑generation students through workshops focused on leadership, time management, and academic success.</li>
-            </ul>
-          </div>
-          <div class="exp-item">
-            <div class="role">Titan Public Relations — Account Coordinator</div>
-            <div class="meta">Sep 2024 – Dec 2024 · Fullerton, CA</div>
-            <ul class="bullet">
-              <li>Supported an entertainment client’s PR campaign by coordinating media outreach, content calendars, and digital engagement to align with brand goals.</li>
-            </ul>
-          </div>
-          <div class="exp-item">
-            <div class="role">Pasadena City College — Student Office Assistant</div>
-            <div class="meta">Jan 2022 – Aug 2023 · Pasadena, CA</div>
-            <ul class="bullet">
-              <li>Streamlined operations by managing communications, scheduling, and 1,000+ records, reducing response time by 50% using CRM and Google Suite.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card block">
-          <div class="head"><h2>Projects</h2></div>
-          <div class="proj-item">
-            <div class="role">Newport Beach Film Festival — Brazilian Spotlight Outreach</div>
-            <div class="meta">Aug 2025 – Present</div>
-            <ul class="bullet">
-              <li>Coordinated sponsor outreach, creative assets, and event logistics for a large‑scale cultural showcase that achieved sold‑out attendance.</li>
-            </ul>
-          </div>
-          <div class="proj-item">
-            <div class="role">The Inner Universe — Podcast Host & Producer</div>
-            <div class="meta">Apr 2025 – Present</div>
-            <ul class="bullet">
-              <li>Produce, script, and host a podcast on creativity, psychology, and healing; built an audience of 500+ across Spotify, iHeartRadio, and Amazon Music.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card block">
-          <div class="head"><h2>Leadership & Awards</h2></div>
-          <div class="lead-item">
-            <div class="role">Entertainment & Tourism Club (ETC) — Member</div>
-            <div class="meta">Aug 2025 – Present</div>
-          </div>
-          <div class="lead-item">
-            <div class="role">Public Relations Student Society of America (PRSSA) — Member</div>
-            <div class="meta">Aug 2024 – Aug 2025</div>
-          </div>
-          <div class="lead-item">
-            <div class="role">Burmese Club — President</div>
-            <div class="meta">Aug 2021 – Aug 2022</div>
-          </div>
-          <div class="lead-item">
-            <span class="banner">NCWIT Honorable Mention (2018, 2019) • Congressional Recognition for Computing (2018)</span>
-          </div>
-        </div>
-      </section>
     </div>
-  </main>
-
-  <footer>
-    <div>Tip: Use <strong>⌘/Ctrl + P</strong> to save this page as a PDF when submitting applications.</div>
-  </footer>
+  </div>
 </body>
 </html>
+
